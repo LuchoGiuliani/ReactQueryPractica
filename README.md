@@ -1,4 +1,4 @@
-# React + TypeScript + Vite + reactQuery + Reducer Digital Huse course.
+# React + TypeScript + Vite + reactQuery + Reducer Digital House.
 
 En este proyecto incorporamos nuevas herramientas para mejorar la calidad de nuestras aplicaciones, mejor rendimiento y mas orden en la aplicacion en general.
 
