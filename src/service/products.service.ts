@@ -14,7 +14,7 @@ export const getProducts = async (page = 0):Promise<Product[]> => {
     } catch (error) {
      throw new Error("failed network error")
     }
-  };
+  }; 
 
   export const createProduct = async(product: Product):Promise<Product> => {
 
