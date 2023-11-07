@@ -43,7 +43,7 @@ export const CardCredit = () => {
       name: "",
       expiry: "",
       cvc: "",
-      focus: "",
+      focus: ""  ,
     });
 
     dispatch({type:"CLEAR_CART", payload: { } as CartProduct})
@@ -57,7 +57,7 @@ export const CardCredit = () => {
           name={name}
           expiry={expiry}
           cvc={cvc}
-          focused={cardData.focus}
+         
         />
       </div>
       <form onSubmit={handleSubmit}>

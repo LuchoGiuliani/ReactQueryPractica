@@ -15,7 +15,7 @@ export const Dashboard = () => {
     releaseDate: "",
     tail: "",
     type: "",
-    id: "",
+    id: 1,
     price: 0,
   });
 
