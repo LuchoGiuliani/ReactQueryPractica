@@ -30,6 +30,7 @@ export const Navbar = () => {
           <span>DH Ecommerce</span>
         </div>
       </div>
+     
       {location.pathname !== "/checkout" && (
         <>
           <div className={styles.navbarCartContainer}>

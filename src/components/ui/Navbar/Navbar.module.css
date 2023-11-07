@@ -1,40 +1,48 @@
-.navbarContainer{
-    position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      align-items: center;
-      background-color: transparent;
-      display: flex;
-      justify-content: space-between;
-    padding: 15px 20px;
-  }
-  
-  .navbarDetail{
-    align-items: center;
-      cursor: pointer;
-      display: flex;
-      gap: 1.2rem;
-  }
-  
-  .navbarCartContainer{
-    align-items: center;
-      background-color: rgba(255, 255, 255, 0.215);
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      height: 50px;
-      justify-content: center;
-      margin: 0 10px;
-      position: relative;
-      transition: 0.5s ease-in-out;
-      width: 50px;
-  }
-  
-  .navbarTextAmount{
-    font-size: 1.2rem;
-      font-weight: bold;
-      position: absolute;
-      right: 0px;
-      top: -25px;
-  }
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  z-index: 1220;
+  border-radius: 0px 0px 22px 22px;
+  opacity: 0.9;
+}
+
+.navbarDetail {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbarCartContainer {
+  align-items: center;
+  background-color: rgba(184, 173, 173, 0.215);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin: 0 10px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  width: 50px;
+}
+.navbarCartContainer:hover {
+  scale: 1.1;
+  border-radius: 6px;
+  background-color: gold;
+}
+
+.navbarTextAmount {
+  font-size: 0.6rem;
+  font-weight: bold;
+  position: absolute;
+  right: 0px;
+  top: -25px;
+}
