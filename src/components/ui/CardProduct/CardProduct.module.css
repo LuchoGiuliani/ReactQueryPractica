@@ -40,7 +40,7 @@
 	position: absolute;
 	top: 40%;
 	transform: translateY(-60%);
-	z-index: 10000;
+	z-index: 100;
 	width: 80px;
 	padding-bottom: 12px;
 }

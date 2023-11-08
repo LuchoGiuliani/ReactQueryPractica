@@ -22,6 +22,7 @@ export const Navbar = () => {
   const handleNavigateToHome = () => {
     navigate("/");
   };
+
   return (
     <div className={styles.navbarContainer}>
       <div className={styles.navbarDetail} onClick={handleNavigateToHome}>
@@ -30,7 +31,7 @@ export const Navbar = () => {
           <span>DH Ecommerce</span>
         </div>
       </div>
-     
+
       {location.pathname !== "/checkout" && (
         <>
           <div className={styles.navbarCartContainer}>

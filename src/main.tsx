@@ -12,6 +12,8 @@ import { Login } from "./pages/Login/Login.tsx";
 import { Dashboard } from "./pages/Dashboard/Dashboard.tsx";
 
 
+
+
 const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
@@ -32,9 +34,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
+    
     <CartProvider>
       <RouterProvider router={router} />
     </CartProvider>
+   
     </QueryClientProvider>
   </React.StrictMode>
 );
