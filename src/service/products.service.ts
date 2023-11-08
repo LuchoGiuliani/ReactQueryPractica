@@ -3,7 +3,7 @@ import {Product} from "../interface"
 export const getProducts = async (page = 0):Promise<Product[]> => {
 
     try {
-      const response = await fetch(`http://localhost:3000/products?_page=${page}&_limit=24`);
+      const response = await fetch(`https://my-json-server.typicode.com/LuchoGiuliani/DataBaseDH/products?_page=${page}&_limit=24`);
      
       if(response.ok) {
         const data = await response.json();
@@ -19,7 +19,7 @@ export const getProducts = async (page = 0):Promise<Product[]> => {
   export const createProduct = async(product: Product):Promise<Product> => {
 
     try {
-      const response = await fetch(`http://localhost:3000/products`,{
+      const response = await fetch(`https://my-json-server.typicode.com/LuchoGiuliani/DataBaseDH/products`,{
         method: "POST",
         headers: {
           "Content-Type": "application/json"
