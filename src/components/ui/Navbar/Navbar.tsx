@@ -12,7 +12,7 @@ import "./navbar.css"
 
 export const Navbar = () => {
 
-  const {darkMode, toggleDarkMode} = useThemeContext()
+  const { darkMode, toggleDarkMode } = useThemeContext() as { darkMode: unknown, toggleDarkMode: () => void };
   const className = darkMode ? "dark" : "light"
 
   console.log(darkMode);

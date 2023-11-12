@@ -3,7 +3,8 @@ import heroBackground from "../../../assets/newPng.png"
 import { useThemeContext } from "../../../context/ThemeContext";
 import "./hero.css"
 const Hero = () => {
-  const {darkMode, toggleDarkMode} = useThemeContext()
+  const { darkMode } = useThemeContext() as { darkMode: unknown, toggleDarkMode: () => void };
+
   const className = darkMode ? "dark" : "light"
 
   return (

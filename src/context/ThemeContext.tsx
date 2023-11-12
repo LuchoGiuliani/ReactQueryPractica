@@ -1,23 +1,28 @@
 import { createContext, useContext } from "react";
 import { useToggle } from "../hooks/useToggle";
 
-const ThemeContext = createContext()
-
-export const useThemeContext = () =>  {
-    return useContext(ThemeContext)
+interface ThemeContextType {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
 }
 
-export const ThemeProvider = ({children}) => {
-    const [darkMode, toggle] =useToggle()
-    
+const ThemeContext = createContext<ThemeContextType>({
+  darkMode: false,
+  toggleDarkMode: () => {},
+});
 
-    const toggleDarkMode = () => {
-        toggle()
-    }
+export const useThemeContext = () => {
+  return useContext(ThemeContext);
+};
 
-    return (
-        <ThemeContext.Provider value ={{darkMode, toggleDarkMode}}>
-            {children}
-        </ThemeContext.Provider>
-    )
-}
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const [darkMode, toggle] = useToggle();
+
+  const toggleDarkMode = () => {
+    toggle();
+  };
+
+  const value = { darkMode, toggleDarkMode };
+
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+};
