@@ -9,7 +9,7 @@ import { useThemeContext } from "../../context/ThemeContext";
 import "./home.css"
 
 export const Home = () => {
-  const {darkMode, toggleDarkMode} = useThemeContext()
+  const { darkMode } = useThemeContext() as { darkMode: unknown, toggleDarkMode: () => void };
   const className = darkMode ? "dark" : "light"
 
   const [page, setPage] = useState(1);

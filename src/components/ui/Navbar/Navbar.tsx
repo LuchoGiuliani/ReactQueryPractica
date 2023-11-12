@@ -12,7 +12,7 @@ import "./navbar.css"
 
 export const Navbar = () => {
 
-  const { darkMode, toggleDarkMode } = useThemeContext() as { darkMode: unknown, toggleDarkMode: () => void };
+  const { darkMode, toggleDarkMode } = useThemeContext() as { darkMode: boolean, toggleDarkMode: () => void };
   const className = darkMode ? "dark" : "light"
 
   console.log(darkMode);
@@ -46,7 +46,7 @@ export const Navbar = () => {
       {location.pathname !== "/checkout" && (
         <>
           <div className={styles.container}>
-            <button onClick={toggleDarkMode}  value={darkMode} className={styles.dark}> <img src={darkMode ? moon: sun} alt="" /></button>
+            <button onClick={toggleDarkMode}  value={darkMode.toString()} className={styles.dark}> <img src={darkMode ? moon: sun} alt="" /></button>
             <div className={styles.navbarCartContainer}>
               <p className={styles.navbarTextAmount}>{cartItems.length}</p>
               <img src={Cart} alt="Cart" onClick={handleShowCartModal} />

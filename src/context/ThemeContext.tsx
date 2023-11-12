@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { useToggle } from "../hooks/useToggle";
+import  useToggle  from "../hooks/useToggle";
 
 interface ThemeContextType {
   darkMode: boolean;
@@ -11,6 +11,7 @@ const ThemeContext = createContext<ThemeContextType>({
   toggleDarkMode: () => {},
 });
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useThemeContext = () => {
   return useContext(ThemeContext);
 };
