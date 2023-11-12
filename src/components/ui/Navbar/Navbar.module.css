@@ -9,7 +9,7 @@
   justify-content: space-between;
   padding: 15px 20px;
   z-index: 1220;
-  border-radius: 0px 0px 22px 22px;
+  *border-radius: 0px 0px 22px 22px;
   opacity: 0.9;
 }
 
@@ -39,8 +39,8 @@
   height: 34px;
 }
 .navbarCartContainer:hover {
-  scale: 1.1;
-  border-radius: 6px;
+  *scale: 1.1;
+  *border-radius: 6px;
   background-color: gold;
 }
 
