@@ -7,14 +7,13 @@ import "./index.css";
 import { Home } from "./pages/Home/Home.tsx";
 import { CartProvider } from "./context/CartProvider.tsx";
 import { Checkout } from "./pages/Checkout/Checkout.tsx";
-import { QueryClient,QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Login } from "./pages/Login/Login.tsx";
 import { Dashboard } from "./pages/Dashboard/Dashboard.tsx";
 
+import {ThemeProvider} from "./context/ThemeContext.tsx"
 
-
-
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -24,21 +23,25 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "/checkout", element: <Checkout /> },
     ],
-  },{
-    path:"/login", element: <Login/>
-  },{
-    path: "dashboard", element: <Dashboard />
-  }
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <ThemeProvider value={[]}>
     <QueryClientProvider client={queryClient}>
-    
-    <CartProvider>
-      <RouterProvider router={router} />
-    </CartProvider>
-   
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </QueryClientProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

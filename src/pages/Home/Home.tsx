@@ -5,8 +5,13 @@ import { CardProduct } from "../../components/ui/CardProduct";
 import Hero from "../../components/ui/Hero/Hero";
 import { getProducts } from "../../service";
 import styles from "./Home.module.css";
+import { useThemeContext } from "../../context/ThemeContext";
+import "./home.css"
 
 export const Home = () => {
+  const {darkMode, toggleDarkMode} = useThemeContext()
+  const className = darkMode ? "dark" : "light"
+
   const [page, setPage] = useState(1);
 
   const { data, isLoading, error } = useQuery(
@@ -21,12 +26,12 @@ export const Home = () => {
       <Toaster richColors />
       {isLoading && <p>Loading...</p>}
       {error && <p>Something went wrong...</p>}
-      <div className={styles.container}>
+      <div className={`theme-${className} ${styles.container}`}>
         {data?.map((product) => (
           <CardProduct key={product.tail} product={product} />
         ))}
       </div>
-      <div className={styles.paginationContainer}>
+      <div className={`theme-${className} ${styles.paginationContainer}`}>
         <button
           className={styles.paginationButton}
           onClick={() => setPage(page - 1)}

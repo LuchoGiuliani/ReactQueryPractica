@@ -1,0 +1,13 @@
+.theme-dark{
+    background-color: black !important;
+}
+.theme-light {
+    background-color: aliceblue !important;
+}
+
+.text-dark{
+    color: azure;
+}
+.text-light{
+    color: black;
+}

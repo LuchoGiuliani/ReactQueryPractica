@@ -26,12 +26,17 @@
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  height: 50px;
+  height: 30px;
   justify-content: center;
   margin: 0 10px;
   position: relative;
   transition: 0.5s ease-in-out;
-  width: 50px;
+  width: 26px;
+  padding: 6px;
+}
+.navbarCartContainer img {
+  width: 24px;
+  height: 34px;
 }
 .navbarCartContainer:hover {
   scale: 1.1;
@@ -47,3 +52,19 @@
   top: -25px;
 }
 
+.dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 34px;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+.dark img {
+ 
+}
+.container {
+  display: flex;
+  align-items: center;
+}
